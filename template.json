@@ -48,7 +48,7 @@
       "http_directory": "http",
       "iso_checksum": "8fdb6715228ea90faba58cb84644d296",
       "iso_checksum_type": "md5",
-      "iso_url": "ftp://ftp.iut-bm.univ-fcomte.fr/debian-cd/7.5.0/amd64/iso-cd/debian-7.5.0-amd64-netinst.iso",
+      "iso_url": "http://cdimage.debian.org/debian-cd/7.5.0/amd64/iso-cd/debian-7.5.0-amd64-netinst.iso",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_port": 22,
