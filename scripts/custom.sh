@@ -1,4 +1,4 @@
-apt-get -y install git htop vim screen
+apt-get -y install git htop vim screen fontconfig
 
 # Change timezone
 echo "Europe/Paris" > /etc/timezone
