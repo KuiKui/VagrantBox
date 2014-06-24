@@ -11,6 +11,7 @@
         "scripts/mysql.sh",
         "scripts/apache.sh",
         "scripts/php.sh",
+        "scripts/redis.sh",
         "scripts/zsh.sh",
         "scripts/cleanup.sh",
         "scripts/zerodisk.sh"
@@ -20,6 +21,17 @@
           "execute_command": "echo 'vagrant'|sudo -S bash '{{.Path}}'"
         }
       }
+    },
+    {
+      "type": "file",
+      "source": "/Users/florentviel/apps/go/src/RemoteDebugCenter/remote-debug-center.tar.gz",
+      "destination": "/tmp/remote-debug-center.tar.gz"
+    },
+    {
+      "type": "shell",
+      "scripts": [
+        "scripts/debug.sh"
+      ]
     }
   ],
   "builders": [
