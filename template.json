@@ -12,9 +12,7 @@
         "scripts/apache.sh",
         "scripts/php.sh",
         "scripts/redis.sh",
-        "scripts/zsh.sh",
-        "scripts/cleanup.sh",
-        "scripts/zerodisk.sh"
+        "scripts/zsh.sh"
       ],
       "override": {
         "virtualbox-iso": {
@@ -30,8 +28,15 @@
     {
       "type": "shell",
       "scripts": [
-        "scripts/debug.sh"
-      ]
+        "scripts/debug.sh",
+        "scripts/cleanup.sh",
+        "scripts/zerodisk.sh"
+      ],
+      "override": {
+        "virtualbox-iso": {
+          "execute_command": "echo 'vagrant'|sudo -S bash '{{.Path}}'"
+        }
+      }
     }
   ],
   "builders": [
@@ -60,7 +65,7 @@
       "http_directory": "http",
       "iso_checksum": "8fdb6715228ea90faba58cb84644d296",
       "iso_checksum_type": "md5",
-      "iso_url": "http://cdimage.debian.org/debian-cd/7.5.0/amd64/iso-cd/debian-7.5.0-amd64-netinst.iso",
+      "iso_url": "/Users/florentviel/Downloads/debian-7.5.0-amd64-netinst.iso",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_port": 22,
