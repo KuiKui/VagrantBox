@@ -146,6 +146,10 @@ $composer --version
 Composer version 28c65b5425f7f8722c260e3787b74c1ea6b37e3b 2014-06-22 18:24:28
 ```
 ```
+$ ansible --version
+ansible 1.6.3
+```
+```
 $ htop --version
 htop 1.0.1 - (C) 2004-2011 Hisham Muhammad
 Released under the GNU GPL.
@@ -157,6 +161,7 @@ Screen version 4.01.00devel (GNU) 2-May-06
 
 *Additional tool*
 
+[Remote Debug Center](https://github.com/Xotelia/RemoteDebugCenter) is also installed.
 
 ## Usage
 
@@ -175,9 +180,5 @@ Then :
 
 * source files are in `/vagrant`
 * mysql is up with user `root` and password `vagrant`
+* redis is up on `127.0.0.1:6379`
 * http server can be reached at `http://localhost:8080`
-
-## Availability
-
-A built box is also available here : mettre l'url qui va bien
-

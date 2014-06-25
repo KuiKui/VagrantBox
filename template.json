@@ -3,6 +3,7 @@
     {
       "type": "shell",
       "scripts": [
+        "scripts/sources.sh",
         "scripts/base.sh",
         "scripts/custom.sh",
         "scripts/virtualbox.sh",
@@ -12,6 +13,7 @@
         "scripts/apache.sh",
         "scripts/php.sh",
         "scripts/redis.sh",
+        "scripts/ansible.sh",
         "scripts/zsh.sh"
       ],
       "override": {
@@ -22,7 +24,7 @@
     },
     {
       "type": "file",
-      "source": "/Users/florentviel/apps/go/src/RemoteDebugCenter/remote-debug-center.tar.gz",
+      "source": "/Users/droussel/Downloads/remote-debug-center.tar.gz",
       "destination": "/tmp/remote-debug-center.tar.gz"
     },
     {
@@ -65,7 +67,7 @@
       "http_directory": "http",
       "iso_checksum": "8fdb6715228ea90faba58cb84644d296",
       "iso_checksum_type": "md5",
-      "iso_url": "/Users/florentviel/Downloads/debian-7.5.0-amd64-netinst.iso",
+      "iso_url": "http://cdimage.debian.org/debian-cd/7.5.0/amd64/iso-cd/debian-7.5.0-amd64-netinst.iso",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_port": 22,
