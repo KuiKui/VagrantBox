@@ -37,7 +37,7 @@ mysqld  Ver 5.5.37-0+wheezy1 for debian-linux-gnu on x86_64 ((Debian))
 ```
 $ mysql --version
 mysql  Ver 14.14 Distrib 5.5.37, for debian-linux-gnu (x86_64) using readline 6.2
-``
+```
 
 *PHP*
 ```
@@ -121,7 +121,7 @@ date.timezone = Europe/Paris
 ```
 $ redis-server --version
 Redis server version 2.4.14 (00000000:0)
-``
+```
 
 *Ruby*
 ```
