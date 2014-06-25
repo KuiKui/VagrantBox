@@ -12,7 +12,7 @@ $ packer build template.json
 
 ## Specs
 
-*Linux*
+**Linux**
 ```
 $ cat /etc/debian_version
 7.5
@@ -22,14 +22,14 @@ $cat /etc/timezone
 Europe/Paris
 ```
 
-*Apache*
+**Apache**
 ```
 $ apache2 -v
 Server version: Apache/2.2.22 (Debian)
 Server built:   Feb  1 2014 21:26:04
 ```
 
-*MySQL*
+**MySQL**
 ```
 $ mysqld --version
 mysqld  Ver 5.5.37-0+wheezy1 for debian-linux-gnu on x86_64 ((Debian))
@@ -39,7 +39,7 @@ $ mysql --version
 mysql  Ver 14.14 Distrib 5.5.37, for debian-linux-gnu (x86_64) using readline 6.2
 ```
 
-*PHP*
+**PHP**
 ```
 $ php -v
 PHP 5.4.4-14+deb7u11 (cli) (built: Jun 13 2014 13:53:15)
@@ -117,26 +117,26 @@ memory_limit = 256M
 date.timezone = Europe/Paris
 ```
 
-*Redis*
+**Redis**
 ```
 $ redis-server --version
 Redis server version 2.4.14 (00000000:0)
 ```
 
-*Ruby*
+**Ruby**
 ```
 $ ruby --version
 ruby 1.9.3p194 (2012-04-20 revision 35410) [x86_64-linux]
 ```
 
-*Shell*
+**Shell**
 ```
 $ ps -p $$
   PID TTY          TIME CMD
  3371 pts/0    00:00:00 zsh
 ```
 
-*Tools*
+**Tools**
 ```
 $ git --version
 git version 1.7.10.4
@@ -159,7 +159,7 @@ $ screen --version
 Screen version 4.01.00devel (GNU) 2-May-06
 ```
 
-*Additional tool*
+**Additional tool**
 
 [Remote Debug Center](https://github.com/Xotelia/RemoteDebugCenter) is also installed.
 
