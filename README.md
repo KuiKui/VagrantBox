@@ -1,8 +1,8 @@
-### Prérequis
+## Dependencies
 
-Installer [Virtualbox](https://www.virtualbox.org/wiki/Downloads) et [packer](http://www.packer.io/downloads.html).
+Install [Virtualbox](https://www.virtualbox.org/wiki/Downloads) and [packer](http://www.packer.io/downloads.html).
 
-### Construction de la box
+## Build
 
 ```
 $ git clone git@bitbucket.org:xotelia/boxes.git
@@ -10,8 +10,174 @@ $ cd boxes
 $ packer build template.json
 ```
 
-### Ajout de la box a `vagrant`
+## Specs
 
+*Linux*
+```
+$ cat /etc/debian_version
+7.5
+```
+```
+$cat /etc/timezone
+Europe/Paris
+```
+
+*Apache*
+```
+$ apache2 -v
+Server version: Apache/2.2.22 (Debian)
+Server built:   Feb  1 2014 21:26:04
+```
+
+*MySQL*
+```
+$ mysqld --version
+mysqld  Ver 5.5.37-0+wheezy1 for debian-linux-gnu on x86_64 ((Debian))
+```
+```
+$ mysql --version
+mysql  Ver 14.14 Distrib 5.5.37, for debian-linux-gnu (x86_64) using readline 6.2
+``
+
+*PHP*
+```
+$ php -v
+PHP 5.4.4-14+deb7u11 (cli) (built: Jun 13 2014 13:53:15)
+Copyright (c) 1997-2012 The PHP Group
+Zend Engine v2.4.0, Copyright (c) 1998-2012 Zend Technologies
+    with Xdebug v2.2.1, Copyright (c) 2002-2012, by Derick Rethans
+```
+```
+$ php -m
+[PHP Modules]
+apc
+bcmath
+bz2
+calendar
+Core
+ctype
+curl
+date
+dba
+dom
+ereg
+exif
+fileinfo
+filter
+ftp
+gd
+gettext
+hash
+iconv
+imagick
+intl
+json
+libxml
+mbstring
+mcrypt
+memcached
+mhash
+mysql
+mysqli
+openssl
+pcntl
+pcre
+PDO
+pdo_mysql
+pdo_sqlite
+Phar
+posix
+Reflection
+session
+shmop
+SimpleXML
+soap
+sockets
+SPL
+sqlite3
+standard
+sysvmsg
+sysvsem
+sysvshm
+tokenizer
+wddx
+xdebug
+xml
+xmlreader
+xmlwriter
+xsl
+zip
+zlib
+
+[Zend Modules]
+Xdebug
+```
+```
+memory_limit = 256M
+date.timezone = Europe/Paris
+```
+
+*Redis*
+```
+$ redis-server --version
+Redis server version 2.4.14 (00000000:0)
+``
+
+*Ruby*
+```
+$ ruby --version
+ruby 1.9.3p194 (2012-04-20 revision 35410) [x86_64-linux]
+```
+
+*Shell*
+```
+$ ps -p $$
+  PID TTY          TIME CMD
+ 3371 pts/0    00:00:00 zsh
+```
+
+*Tools*
+```
+$ git --version
+git version 1.7.10.4
+```
+```
+$composer --version
+Composer version 28c65b5425f7f8722c260e3787b74c1ea6b37e3b 2014-06-22 18:24:28
+```
+```
+$ htop --version
+htop 1.0.1 - (C) 2004-2011 Hisham Muhammad
+Released under the GNU GPL.
+```
+```
+$ screen --version
+Screen version 4.01.00devel (GNU) 2-May-06
+```
+
+*Additional tool*
+
+
+## Usage
+
+Add the new built box to vagrant :
 ```
 $ vagrant box add xotelia xotelia.box
 ```
+
+Put our [standard Vagrantfile]() at the root of your project or create your own, and launch vagrant :
+```
+$ vagrant up
+$ vagrant ssh
+```
+
+Then :
+
+* source files are in `/vagrant`
+* mysql is up with user `root` and password `vagrant`
+* http server can be reached at `http://localhost:8080`
+
+## Availability
+
+A built box is also available here : mettre l'url qui va bien
+
