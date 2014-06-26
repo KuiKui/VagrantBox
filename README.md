@@ -142,7 +142,7 @@ $ git --version
 git version 1.7.10.4
 ```
 ```
-$composer --version
+$ composer --version
 Composer version 28c65b5425f7f8722c260e3787b74c1ea6b37e3b 2014-06-22 18:24:28
 ```
 ```
@@ -162,6 +162,21 @@ Screen version 4.01.00devel (GNU) 2-May-06
 **Additional tool**
 
 [Remote Debug Center](https://github.com/Xotelia/RemoteDebugCenter) is also installed.
+
+**Additional Apache config**
+
+Some environmental variables are set in `/etc/apache2/apache2.conf` to ease the development :
+
+* `SetEnv ENV_DEV true` : Use this custom env variable to add dev only features (debug, etc.)
+* `SetEnv REDIRECT_MAGE_IS_DEVELOPER_MODE true` : Used by Magento to switch in dev mode
+
+Check these variables with PHP :
+```
+<?php
+if (isset($_SERVER['ENV_DEV'])) {
+    doSomeDevThing();
+}
+``
 
 ## Usage
 
