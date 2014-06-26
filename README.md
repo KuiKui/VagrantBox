@@ -176,7 +176,7 @@ Check these variables with PHP :
 if (isset($_SERVER['ENV_DEV'])) {
     doSomeDevThing();
 }
-``
+```
 
 ## Usage
 
