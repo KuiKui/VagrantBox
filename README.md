@@ -150,6 +150,10 @@ $ ansible --version
 ansible 1.6.3
 ```
 ```
+$ phantomjs --version
+1.9.7
+```
+```
 $ htop --version
 htop 1.0.1 - (C) 2004-2011 Hisham Muhammad
 Released under the GNU GPL.
@@ -196,4 +200,7 @@ Then :
 * source files are in `/vagrant`
 * mysql is up with user `root` and password `vagrant`
 * redis is up on `127.0.0.1:6379`
-* http server can be reached at `http://localhost:8080`
+
+And :
+
+* http server can be reached from local env at `http://localhost:8080`
