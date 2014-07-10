@@ -1,3 +1,5 @@
+Sources to build our preconfigured *LAMP + Redis + Tools* Vagrant box (works fine with Symfony and Magento).
+
 ## Dependencies
 
 Install [Virtualbox](https://www.virtualbox.org/wiki/Downloads) and [packer](http://www.packer.io/downloads.html).
