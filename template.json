@@ -14,7 +14,8 @@
         "scripts/php.sh",
         "scripts/redis.sh",
         "scripts/ansible.sh",
-        "scripts/zsh.sh"
+        "scripts/zsh.sh",
+        "scripts/phantomjs.sh"
       ],
       "override": {
         "virtualbox-iso": {
