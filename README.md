@@ -17,10 +17,10 @@ $ packer build template.json
 **Linux**
 ```
 $ cat /etc/debian_version
-7.5
+7.6
 ```
 ```
-$cat /etc/timezone
+$ cat /etc/timezone
 Europe/Paris
 ```
 
@@ -28,23 +28,23 @@ Europe/Paris
 ```
 $ apache2 -v
 Server version: Apache/2.2.22 (Debian)
-Server built:   Feb  1 2014 21:26:04
+Server built:   Jun 16 2014 03:51:14
 ```
 
 **MySQL**
 ```
 $ mysqld --version
-mysqld  Ver 5.5.37-0+wheezy1 for debian-linux-gnu on x86_64 ((Debian))
+mysqld  Ver 5.5.38-0+wheezy1 for debian-linux-gnu on x86_64 ((Debian))
 ```
 ```
 $ mysql --version
-mysql  Ver 14.14 Distrib 5.5.37, for debian-linux-gnu (x86_64) using readline 6.2
+mysql  Ver 14.14 Distrib 5.5.38, for debian-linux-gnu (x86_64) using readline 6.2
 ```
 
 **PHP**
 ```
 $ php -v
-PHP 5.4.4-14+deb7u11 (cli) (built: Jun 13 2014 13:53:15)
+PHP 5.4.4-14+deb7u12 (cli) (built: Jun 30 2014 13:15:11)
 Copyright (c) 1997-2012 The PHP Group
 Zend Engine v2.4.0, Copyright (c) 1998-2012 Zend Technologies
     with Xdebug v2.2.1, Copyright (c) 2002-2012, by Derick Rethans
@@ -145,7 +145,7 @@ git version 1.7.10.4
 ```
 ```
 $ composer --version
-Composer version 28c65b5425f7f8722c260e3787b74c1ea6b37e3b 2014-06-22 18:24:28
+Composer version 0ce0cf42e80d68f5cf5c766457536e2894e32ffc 2014-07-23 17:19:39
 ```
 ```
 $ ansible --version
