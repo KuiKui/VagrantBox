@@ -177,7 +177,7 @@ Some environmental variables are set in `/etc/apache2/apache2.conf` to ease the 
 * `SetEnv REDIRECT_MAGE_IS_DEVELOPER_MODE true` : Used by Magento to switch in dev mode
 
 Check these variables with PHP :
-```
+```php
 <?php
 if (isset($_SERVER['ENV_DEV'])) {
     doSomeDevThing();
