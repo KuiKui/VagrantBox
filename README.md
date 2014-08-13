@@ -1,4 +1,7 @@
-Sources to build our preconfigured *LAMP + Redis + Tools* Vagrant box (works fine with Symfony and Magento).
+# Xotelia Vagrant box
+
+Sources to build our preconfigured *LAMP + Redis + Tools* Vagrant box.
+Works fine with Symfony and Magento.
 
 ## Dependencies
 
