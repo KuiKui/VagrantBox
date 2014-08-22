@@ -25,11 +25,6 @@
       }
     },
     {
-      "type": "file",
-      "source": "/Users/droussel/Downloads/remote-debug-center.tar.gz",
-      "destination": "/tmp/remote-debug-center.tar.gz"
-    },
-    {
       "type": "shell",
       "scripts": [
         "scripts/debug.sh",

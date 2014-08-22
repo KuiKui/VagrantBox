@@ -1,6 +1,6 @@
 # Xotelia Vagrant box
 
-Sources to build our preconfigured *LAMP + Redis + Tools* Vagrant box.  
+Sources to build our preconfigured *LAMP + Redis + Tools* Vagrant box.
 Works fine with Symfony and Magento.
 
 ## Dependencies
@@ -167,10 +167,6 @@ Released under the GNU GPL.
 $ screen --version
 Screen version 4.01.00devel (GNU) 2-May-06
 ```
-
-**Additional tool**
-
-[Remote Debug Center](https://github.com/Xotelia/RemoteDebugCenter) is also installed.
 
 **Additional Apache config**
 
