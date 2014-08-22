@@ -168,10 +168,6 @@ $ screen --version
 Screen version 4.01.00devel (GNU) 2-May-06
 ```
 
-**Additional tool**
-
-[Remote Debug Center](https://github.com/Xotelia/RemoteDebugCenter) is also installed.
-
 **Additional Apache config**
 
 Some environmental variables are set in `/etc/apache2/apache2.conf` to ease the development :
