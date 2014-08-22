@@ -16,17 +16,7 @@
         "scripts/rabbitmq.sh",
         "scripts/ansible.sh",
         "scripts/zsh.sh",
-        "scripts/phantomjs.sh"
-      ],
-      "override": {
-        "virtualbox-iso": {
-          "execute_command": "echo 'vagrant'|sudo -S bash '{{.Path}}'"
-        }
-      }
-    },
-    {
-      "type": "shell",
-      "scripts": [
+        "scripts/phantomjs.sh",
         "scripts/debug.sh",
         "scripts/cleanup.sh",
         "scripts/zerodisk.sh"
