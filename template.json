@@ -17,7 +17,6 @@
         "scripts/ansible.sh",
         "scripts/zsh.sh",
         "scripts/phantomjs.sh",
-        "scripts/debug.sh",
         "scripts/cleanup.sh",
         "scripts/zerodisk.sh"
       ],
