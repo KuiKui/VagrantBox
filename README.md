@@ -75,6 +75,7 @@ gettext
 hash
 iconv
 imagick
+imap
 intl
 json
 libxml
@@ -132,7 +133,7 @@ Redis server version 2.4.14 (00000000:0)
 ```
 $ sudo service rabbitmq-server status
 ...
-{rabbit,"RabbitMQ","2.8.4"},
+{rabbit,"RabbitMQ","3.3.5"},
 ...
 ```
 
