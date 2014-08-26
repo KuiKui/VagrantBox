@@ -1,6 +1,6 @@
 # Xotelia Vagrant box
 
-Sources to build our preconfigured **LAMP** + **Redis** + **RabbitMQ** + **Tools** Vagrant box.
+Sources to build our preconfigured **LAMP** + **Redis** + **RabbitMQ** + **Tools** Vagrant box.  
 Works fine with Symfony, Magento and custom frameworks.
 
 ## Dependencies
