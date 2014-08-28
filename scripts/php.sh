@@ -19,7 +19,7 @@ chmod +x /usr/local/bin/composer
 # Installation de mailparse
 pecl install mailparse
 echo "extension=mailparse.so" > /etc/php5/mods-available/mailparse.ini
-cd /etc/php5/conf.d && ln -s ../mailparse.ini 20-mailparse.ini
+cd /etc/php5/conf.d && ln -s ../mods-available/mailparse.ini 20-mailparse.ini
 
 # Paramétrage divers
 echo "xdebug.max_nesting_level = 250" >> /etc/php5/conf.d/xdebug.ini
