@@ -15,6 +15,7 @@
         "scripts/redis.sh",
         "scripts/rabbitmq.sh",
         "scripts/ansible.sh",
+        "scripts/mail.sh",
         "scripts/zsh.sh",
         "scripts/phantomjs.sh",
         "scripts/cleanup.sh",
