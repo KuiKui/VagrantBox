@@ -1,7 +1,7 @@
 # Installation des paquets
 echo "postfix postfix/mailname string packer-virtualbox-iso" | debconf-set-selections
 echo "postfix postfix/main_mailer_type select Local only" | debconf-set-selections
-DEBIAN_FRONTEND=noninteractive apt-get -y install postfix dovecot-imap
+DEBIAN_FRONTEND=noninteractive apt-get -y install postfix dovecot-imapd
 
 # Configuration de postfix
 postconf -e "home_mailbox = Maildir/"
@@ -18,5 +18,5 @@ maildirmake.dovecot /etc/skel/Maildir/.Archive
 
 # Configuration du user vagrant
 cp -r /etc/skel/Maildir /home/vagrant
-chown -r vagrant:vagrant /home/vagrant/Maildir
+chown -R vagrant:vagrant /home/vagrant/Maildir
 chmod 700 /home/vagrant/Maildir
