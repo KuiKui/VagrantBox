@@ -1,6 +1,6 @@
 # Xotelia Vagrant box
 
-Sources to build our preconfigured **LAMP** + **Redis** + **RabbitMQ** + **Tools** Vagrant box.  
+Sources to build our preconfigured **LAMP** + **Redis** + **RabbitMQ** + **Postfix** + **Dovecot** + **Tools** Vagrant box.
 Works fine with Symfony, Magento and custom frameworks.
 
 ## Dependencies
@@ -10,9 +10,10 @@ Install [Virtualbox](https://www.virtualbox.org/wiki/Downloads) and [packer](htt
 ## Build
 
 ```
-$ git clone git@bitbucket.org:xotelia/boxes.git
-$ cd boxes
+$ git clone git@github.com:Xotelia/VagrantBox.git
+$ cd VagrantBox
 $ packer build template.json
+$ vagrant box add xotelia xotelia.box
 ```
 
 ## Specs
@@ -47,7 +48,7 @@ mysql  Ver 14.14 Distrib 5.5.38, for debian-linux-gnu (x86_64) using readline 6.
 **PHP**
 ```
 $ php -v
-PHP 5.4.4-14+deb7u12 (cli) (built: Jun 30 2014 13:15:11)
+PHP 5.4.4-14+deb7u14 (cli) (built: Aug 21 2014 08:36:44)
 Copyright (c) 1997-2012 The PHP Group
 Zend Engine v2.4.0, Copyright (c) 1998-2012 Zend Technologies
     with Xdebug v2.2.1, Copyright (c) 2002-2012, by Derick Rethans
@@ -79,6 +80,7 @@ imap
 intl
 json
 libxml
+mailparse
 mbstring
 mcrypt
 memcached
@@ -143,6 +145,18 @@ $ ruby --version
 ruby 1.9.3p194 (2012-04-20 revision 35410) [x86_64-linux]
 ```
 
+**Postfix**
+```
+$ postconf -d | grep mail_version
+mail_version = 2.9.6
+```
+
+**Dovecot Imap**
+```
+$ dovecot --version
+2.1.7
+```
+
 **Shell**
 ```
 $ ps -p $$
@@ -157,11 +171,11 @@ git version 1.7.10.4
 ```
 ```
 $ composer --version
-Composer version 0ce0cf42e80d68f5cf5c766457536e2894e32ffc 2014-07-23 17:19:39
+Composer version a8adbfeb9fc7861deade782938222714168a22a8 2014-09-05 16:28:50
 ```
 ```
 $ ansible --version
-ansible 1.6.3
+ansible 1.6.6
 ```
 ```
 $ phantomjs --version
