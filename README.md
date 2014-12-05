@@ -21,7 +21,7 @@ $ vagrant box add xotelia xotelia.box
 **Linux**
 ```
 $ cat /etc/debian_version
-7.6
+7.7
 ```
 ```
 $ cat /etc/timezone
@@ -32,25 +32,25 @@ Europe/Paris
 ```
 $ apache2 -v
 Server version: Apache/2.2.22 (Debian)
-Server built:   Jun 16 2014 03:51:14
+Server built:   Jul 24 2014 15:34:00
 ```
 
 **MySQL**
 ```
 $ mysqld --version
-mysqld  Ver 5.5.38-0+wheezy1 for debian-linux-gnu on x86_64 ((Debian))
+mysqld  Ver 5.5.40-0+wheezy1 for debian-linux-gnu on x86_64 ((Debian))
 ```
 ```
 $ mysql --version
-mysql  Ver 14.14 Distrib 5.5.38, for debian-linux-gnu (x86_64) using readline 6.2
+mysql  Ver 14.14 Distrib 5.5.40, for debian-linux-gnu (x86_64) using readline 6.2
 ```
 
 **PHP**
 ```
 $ php -v
-PHP 5.4.4-14+deb7u14 (cli) (built: Aug 21 2014 08:36:44)
-Copyright (c) 1997-2012 The PHP Group
-Zend Engine v2.4.0, Copyright (c) 1998-2012 Zend Technologies
+PHP 5.4.35-0+deb7u2 (cli) (built: Nov 19 2014 07:56:24)
+Copyright (c) 1997-2014 The PHP Group
+Zend Engine v2.4.0, Copyright (c) 1998-2014 Zend Technologies
     with Xdebug v2.2.1, Copyright (c) 2002-2012, by Derick Rethans
 ```
 ```
@@ -135,7 +135,7 @@ Redis server version 2.4.14 (00000000:0)
 ```
 $ sudo service rabbitmq-server status
 ...
-{rabbit,"RabbitMQ","3.3.5"},
+{rabbit,"RabbitMQ","3.4.2"},
 ...
 ```
 
@@ -171,7 +171,7 @@ git version 1.7.10.4
 ```
 ```
 $ composer --version
-Composer version a8adbfeb9fc7861deade782938222714168a22a8 2014-09-05 16:28:50
+Composer version 1.0-dev (6340f4ca5846c5de030876587c1a1172dc68f168) 2014-12-04 15:46:55
 ```
 ```
 $ ansible --version
