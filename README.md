@@ -213,6 +213,12 @@ Add the new built box to vagrant :
 $ vagrant box add xotelia xotelia.box
 ```
 
+Or use the `box` and `box_url` instructions in your Vagrantfile to download the box :
+```ruby
+config.vm.box = "xotelia"
+config.vm.box_url = "https://www.dropbox.com/s/mp2h1c8rlbom2sr/xotelia.box?dl=1"
+```
+
 Put our [standard Vagrantfile]() at the root of your project or create your own, and launch vagrant :
 ```
 $ vagrant up
