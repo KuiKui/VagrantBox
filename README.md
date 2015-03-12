@@ -21,7 +21,7 @@ $ vagrant box add xotelia xotelia.box
 **Linux**
 ```
 $ cat /etc/debian_version
-7.7
+7.8
 ```
 ```
 $ cat /etc/timezone
@@ -32,23 +32,23 @@ Europe/Paris
 ```
 $ apache2 -v
 Server version: Apache/2.2.22 (Debian)
-Server built:   Jul 24 2014 15:34:00
+Server built:   Dec 23 2014 22:48:29
 ```
 
 **MySQL**
 ```
 $ mysqld --version
-mysqld  Ver 5.5.40-0+wheezy1 for debian-linux-gnu on x86_64 ((Debian))
+mysqld  Ver 5.5.41-0+wheezy1 for debian-linux-gnu on x86_64 ((Debian))
 ```
 ```
 $ mysql --version
-mysql  Ver 14.14 Distrib 5.5.40, for debian-linux-gnu (x86_64) using readline 6.2
+mysql  Ver 14.14 Distrib 5.5.41, for debian-linux-gnu (x86_64) using readline 6.2
 ```
 
 **PHP**
 ```
 $ php -v
-PHP 5.4.35-0+deb7u2 (cli) (built: Nov 19 2014 07:56:24)
+PHP 5.4.36-0+deb7u3 (cli) (built: Jan  9 2015 08:07:06)
 Copyright (c) 1997-2014 The PHP Group
 Zend Engine v2.4.0, Copyright (c) 1998-2014 Zend Technologies
     with Xdebug v2.2.1, Copyright (c) 2002-2012, by Derick Rethans
@@ -135,7 +135,7 @@ Redis server version 2.4.14 (00000000:0)
 ```
 $ sudo service rabbitmq-server status
 ...
-{rabbit,"RabbitMQ","3.4.2"},
+{rabbit,"RabbitMQ","3.4.4"},
 ...
 ```
 
@@ -171,7 +171,7 @@ git version 1.7.10.4
 ```
 ```
 $ composer --version
-Composer version 1.0-dev (6340f4ca5846c5de030876587c1a1172dc68f168) 2014-12-04 15:46:55
+Composer version 1.0-dev (eadc167b121359986f542cc9cf976ecee3fcbf69) 2015-03-02 18:20:22
 ```
 ```
 $ ansible --version
@@ -216,7 +216,7 @@ $ vagrant box add xotelia xotelia.box
 Or use the `box` and `box_url` instructions in your Vagrantfile to download the box :
 ```ruby
 config.vm.box = "xotelia"
-config.vm.box_url = "https://www.dropbox.com/s/mp2h1c8rlbom2sr/xotelia.box?dl=1"
+config.vm.box_url = "http://boxes.xotelia.com/xotelia.box"
 ```
 
 Put our [standard Vagrantfile]() at the root of your project or create your own, and launch vagrant :
