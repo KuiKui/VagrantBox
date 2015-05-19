@@ -1,7 +1,7 @@
 # Xotelia Vagrant box
 
 Sources to build our preconfigured **LAMP** + **Redis** + **RabbitMQ** + **Tools** Vagrant box.
-Works fine with Symfony, Magento and custom frameworks.
+Works fine with Symfony.
 
 ## Dependencies
 
@@ -181,12 +181,11 @@ Screen version 4.01.00devel (GNU) 2-May-06
 
 **Additional Apache config**
 
-Some environmental variables are set in `/etc/apache2/apache2.conf` to ease the development :
+An environmental variable is set in `/etc/apache2/apache2.conf` to ease the development :
 
 * `SetEnv ENV_DEV true` : Use this custom env variable to add dev only features (debug, etc.)
-* `SetEnv REDIRECT_MAGE_IS_DEVELOPER_MODE true` : Used by Magento to switch in dev mode
 
-Check these variables with PHP :
+Check this variable with PHP :
 ```php
 <?php
 if (isset($_SERVER['ENV_DEV'])) {
@@ -216,7 +215,8 @@ $ vagrant ssh
 Then :
 
 * source files are in `/vagrant`
-* mysql is up with user `root` and password `vagrant`
+* Apache root directory is `/vagrant/web`
+* MySQL is up with user `root` and password `vagrant`
 * redis is up on `127.0.0.1:6379`
 
 And :
