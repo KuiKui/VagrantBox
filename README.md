@@ -87,7 +87,7 @@ PHP 5.5.24-1~dotdeb+wheezy.1 (cli) (built: Apr 22 2015 05:54:24)
 Copyright (c) 1997-2015 The PHP Group
 Zend Engine v2.5.0, Copyright (c) 1998-2015 Zend Technologies
     with Zend OPcache v7.0.4-dev, Copyright (c) 1999-2015, by Zend Technologies
-    with Xdebug v2.3.2, Copyright (c) 2002-2015, by Derick Rethans```
+    with Xdebug v2.3.2, Copyright (c) 2002-2015, by Derick Rethans
 ```
 ```
 $ php -m
