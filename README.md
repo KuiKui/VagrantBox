@@ -18,7 +18,7 @@ $ packer build template.json
 ## Test
 
 ```
-$ vagrant box add --force kuikui-test kuikui.box
+$ vagrant box add kuikui-test kuikui.box --force
 $ vagrant up
 ```
 
@@ -73,11 +73,11 @@ Server built:   Dec 23 2014 22:48:29
 **MySQL**
 ```
 $ mysqld --version
-mysqld  Ver 5.5.41-0+wheezy1 for debian-linux-gnu on x86_64 ((Debian))
+mysqld  Ver 5.5.43-0+deb7u1 for debian-linux-gnu on x86_64 ((Debian))
 ```
 ```
 $ mysql --version
-mysql  Ver 14.14 Distrib 5.5.41, for debian-linux-gnu (x86_64) using readline 6.2
+mysql  Ver 14.14 Distrib 5.5.43, for debian-linux-gnu (x86_64) using readline 6.2
 ```
 
 **PHP**
@@ -169,7 +169,7 @@ Redis server version 2.4.14 (00000000:0)
 ```
 $ sudo service rabbitmq-server status
 ...
-{rabbit,"RabbitMQ","3.4.4"},
+{rabbit,"RabbitMQ","3.5.2"},
 ...
 ```
 
@@ -201,7 +201,7 @@ ansible 1.6.6
 ```
 ```
 $ phantomjs --version
-1.9.7
+1.9.8
 ```
 ```
 $ htop --version
