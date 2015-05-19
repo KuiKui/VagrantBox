@@ -89,6 +89,7 @@ Zend Engine v2.5.0, Copyright (c) 1998-2015 Zend Technologies
     with Zend OPcache v7.0.4-dev, Copyright (c) 1999-2015, by Zend Technologies
     with Xdebug v2.3.2, Copyright (c) 2002-2015, by Derick Rethans```
 ```
+```
 $ php -m
 [PHP Modules]
 bcmath
