@@ -1,6 +1,6 @@
 # Xotelia Vagrant box
 
-Sources to build our preconfigured **LAMP** + **Redis** + **RabbitMQ** + **Postfix** + **Dovecot** + **Tools** Vagrant box.
+Sources to build our preconfigured **LAMP** + **Redis** + **RabbitMQ** + **Tools** Vagrant box.
 Works fine with Symfony, Magento and custom frameworks.
 
 ## Dependencies
@@ -143,18 +143,6 @@ $ sudo service rabbitmq-server status
 ```
 $ ruby --version
 ruby 1.9.3p194 (2012-04-20 revision 35410) [x86_64-linux]
-```
-
-**Postfix**
-```
-$ postconf -d | grep mail_version
-mail_version = 2.9.6
-```
-
-**Dovecot Imap**
-```
-$ dovecot --version
-2.1.7
 ```
 
 **Shell**
