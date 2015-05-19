@@ -13,7 +13,6 @@
         "scripts/php.sh",
         "scripts/apache.sh",
         "scripts/redis.sh",
-        "scripts/rabbitmq.sh",
         "scripts/ansible.sh",
         "scripts/zsh.sh",
         "scripts/phantomjs.sh",
