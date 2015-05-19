@@ -1,4 +1,4 @@
-# Xotelia Vagrant box
+# LAMP Vagrant box
 
 Sources to build our preconfigured **LAMP** + **Redis** + **RabbitMQ** + **Tools** Vagrant box.
 Works fine with Symfony.
@@ -10,11 +10,46 @@ Install [Virtualbox](https://www.virtualbox.org/wiki/Downloads) and [packer](htt
 ## Build
 
 ```
-$ git clone git@github.com:Xotelia/VagrantBox.git
+$ git clone git@github.com:KuiKui/VagrantBox.git
 $ cd VagrantBox
 $ packer build template.json
-$ vagrant box add xotelia xotelia.box
 ```
+
+## Test
+
+```
+$ vagrant box add --force kuikui-test kuikui.box
+$ vagrant up
+```
+
+## Usage
+
+Add the new built box to vagrant :
+```
+$ vagrant box add kuikui kuikui.box
+```
+
+And use the `box` instruction in your Vagrantfile to select the box :
+```ruby
+config.vm.box = "kuikui"
+```
+
+Use the [test Vagrantfile](Vagrantfile) at the root of your project or create your own, and launch vagrant :
+```
+$ vagrant up
+$ vagrant ssh
+```
+
+Then :
+
+* source files are in `/vagrant`
+* Apache root directory is `/vagrant/web`
+* MySQL is up with user `root` and password `vagrant`
+* redis is up on `127.0.0.1:6379`
+
+And :
+
+* http server can be reached from local env at `http://localhost:8080`
 
 ## Specs
 
@@ -191,33 +226,3 @@ if (isset($_SERVER['ENV_DEV'])) {
     doSomeDevThing();
 }
 ```
-
-## Usage
-
-Add the new built box to vagrant :
-```
-$ vagrant box add xotelia xotelia.box
-```
-
-Or use the `box` and `box_url` instructions in your Vagrantfile to download the box :
-```ruby
-config.vm.box = "xotelia"
-config.vm.box_url = "http://boxes.xotelia.com/xotelia.box"
-```
-
-Put our [standard Vagrantfile]() at the root of your project or create your own, and launch vagrant :
-```
-$ vagrant up
-$ vagrant ssh
-```
-
-Then :
-
-* source files are in `/vagrant`
-* Apache root directory is `/vagrant/web`
-* MySQL is up with user `root` and password `vagrant`
-* redis is up on `127.0.0.1:6379`
-
-And :
-
-* http server can be reached from local env at `http://localhost:8080`

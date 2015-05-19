@@ -81,7 +81,7 @@
   "post-processors": [
     {
       "type": "vagrant",
-      "output": "xotelia.box"
+      "output": "kuikui.box"
     }
   ]
 }
