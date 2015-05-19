@@ -48,15 +48,14 @@ mysql  Ver 14.14 Distrib 5.5.41, for debian-linux-gnu (x86_64) using readline 6.
 **PHP**
 ```
 $ php -v
-PHP 5.4.36-0+deb7u3 (cli) (built: Jan  9 2015 08:07:06)
-Copyright (c) 1997-2014 The PHP Group
-Zend Engine v2.4.0, Copyright (c) 1998-2014 Zend Technologies
-    with Xdebug v2.2.1, Copyright (c) 2002-2012, by Derick Rethans
-```
+PHP 5.5.24-1~dotdeb+wheezy.1 (cli) (built: Apr 22 2015 05:54:24)
+Copyright (c) 1997-2015 The PHP Group
+Zend Engine v2.5.0, Copyright (c) 1998-2015 Zend Technologies
+    with Zend OPcache v7.0.4-dev, Copyright (c) 1999-2015, by Zend Technologies
+    with Xdebug v2.3.2, Copyright (c) 2002-2015, by Derick Rethans```
 ```
 $ php -m
 [PHP Modules]
-apc
 bcmath
 bz2
 calendar
@@ -76,14 +75,11 @@ gettext
 hash
 iconv
 imagick
-imap
 intl
 json
 libxml
-mailparse
 mbstring
 mcrypt
-memcached
 mhash
 mysql
 mysqli
@@ -95,6 +91,7 @@ pdo_mysql
 pdo_sqlite
 Phar
 posix
+readline
 Reflection
 session
 shmop
@@ -114,11 +111,13 @@ xml
 xmlreader
 xmlwriter
 xsl
+Zend OPcache
 zip
 zlib
 
 [Zend Modules]
 Xdebug
+Zend OPcache
 ```
 ```
 memory_limit = 256M
@@ -159,7 +158,7 @@ git version 1.7.10.4
 ```
 ```
 $ composer --version
-Composer version 1.0-dev (eadc167b121359986f542cc9cf976ecee3fcbf69) 2015-03-02 18:20:22
+Composer version 1.0-dev (bc45d9185513575434021527d7756420e9f4b2cf) 2015-05-11 14:49:39
 ```
 ```
 $ ansible --version

@@ -8,4 +8,9 @@ echo 'deb http://www.rabbitmq.com/debian/ testing main' > /etc/apt/sources.list.
 wget http://www.rabbitmq.com/rabbitmq-signing-key-public.asc
 apt-key add rabbitmq-signing-key-public.asc
 
+echo 'deb http://packages.dotdeb.org wheezy-php55 all' > /etc/apt/sources.list.d/php55.list
+echo 'deb-src http://packages.dotdeb.org wheezy-php55 all' >> /etc/apt/sources.list.d/php55.list
+wget http://www.dotdeb.org/dotdeb.gpg
+apt-key add dotdeb.gpg
+
 apt-get -y update
