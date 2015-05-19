@@ -8,6 +8,9 @@ echo "SetEnv ENV_DEV true" >> /etc/apache2/apache2.conf
 
 sed -i 's@/var/www@/vagrant/web@' /etc/apache2/sites-available/default
 sed -i 's@AllowOverride None@AllowOverride All@' /etc/apache2/sites-available/default
-a2enmod actions
+
 usermod -aG adm vagrant
+
+a2enmod actions
 a2enmod rewrite
+a2enmod php5
