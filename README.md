@@ -1,7 +1,6 @@
 # LAMP Vagrant box
 
 Sources to build our preconfigured **LAMP** + **Redis** + **RabbitMQ** + **Tools** Vagrant box.
-Works fine with Symfony.
 
 ## Dependencies
 
@@ -45,11 +44,13 @@ Then :
 * source files are in `/vagrant`
 * Apache root directory is `/vagrant/web`
 * MySQL is up with user `root` and password `vagrant`
-* redis is up on `127.0.0.1:6379`
+* Redis is up on `127.0.0.1:6379`
+* RabbitMQ is up with user `guest` and password `guest`
 
 And :
 
 * http server can be reached from local env at `http://localhost:8080`
+* RabbitMQ web UI can be reached from local env at `http://localhost:15672`
 
 ## Specs
 
@@ -83,10 +84,10 @@ mysql  Ver 14.14 Distrib 5.5.43, for debian-linux-gnu (x86_64) using readline 6.
 **PHP**
 ```
 $ php -v
-PHP 5.5.24-1~dotdeb+wheezy.1 (cli) (built: Apr 22 2015 05:54:24)
+PHP 5.5.26-1~dotdeb+7.4 (cli) (built: Jun 18 2015 17:32:35)
 Copyright (c) 1997-2015 The PHP Group
 Zend Engine v2.5.0, Copyright (c) 1998-2015 Zend Technologies
-    with Zend OPcache v7.0.4-dev, Copyright (c) 1999-2015, by Zend Technologies
+    with Zend OPcache v7.0.6-dev, Copyright (c) 1999-2015, by Zend Technologies
     with Xdebug v2.3.2, Copyright (c) 2002-2015, by Derick Rethans
 ```
 ```
@@ -170,7 +171,7 @@ Redis server version 2.4.14 (00000000:0)
 ```
 $ sudo service rabbitmq-server status
 ...
-{rabbit,"RabbitMQ","3.5.2"},
+{rabbit,"RabbitMQ","3.5.3"},
 ...
 ```
 
@@ -194,7 +195,7 @@ git version 1.7.10.4
 ```
 ```
 $ composer --version
-Composer version 1.0-dev (bc45d9185513575434021527d7756420e9f4b2cf) 2015-05-11 14:49:39
+Composer version 1.0-dev (d0ff01698de0eb74e45ebe379b6ac8ccd5a6b0db) 2015-06-20 11:58:19
 ```
 ```
 $ ansible --version
