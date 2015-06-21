@@ -8,7 +8,6 @@ if test -f .vbox_version ; then
   aptitude -y purge virtualbox-ose-guest-x11 virtualbox-ose-guest-dkms virtualbox-ose-guest-utils
 
   # Install dkms for dynamic compiles
-
   apt-get install -y dkms
 
   # If libdbus is not installed, virtualbox will not autostart
