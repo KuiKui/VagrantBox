@@ -1,6 +1,6 @@
 # LAMP Vagrant box
 
-Sources to build our preconfigured **LAMP** + **Redis** + **Tools** Vagrant box.
+Sources to build our preconfigured **LAMP** + **Redis** + **RabbitMQ** + **Tools** Vagrant box.
 Works fine with Symfony.
 
 ## Dependencies
@@ -164,6 +164,14 @@ date.timezone = Europe/Paris
 ```
 $ redis-server --version
 Redis server version 2.4.14 (00000000:0)
+```
+
+**RabbitMQ**
+```
+$ sudo service rabbitmq-server status
+...
+{rabbit,"RabbitMQ","3.5.2"},
+...
 ```
 
 **Ruby**
