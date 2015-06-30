@@ -196,7 +196,7 @@ git version 1.7.10.4
 ```
 ```
 $ composer --version
-Composer version 1.0-dev (d0ff01698de0eb74e45ebe379b6ac8ccd5a6b0db) 2015-06-20 11:58:19
+Composer version 1.0-dev (b17ccbfa0d73f71ed8c11953e9e1e5d3709bf91e) 2015-06-30 12:27:28
 ```
 ```
 $ ansible --version
