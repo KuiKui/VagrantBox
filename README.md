@@ -199,7 +199,7 @@ Composer version 1.0-dev (d0ff01698de0eb74e45ebe379b6ac8ccd5a6b0db) 2015-06-20 1
 ```
 ```
 $ ansible --version
-ansible 1.6.6
+ansible 1.9.2
 ```
 ```
 $ phantomjs --version
