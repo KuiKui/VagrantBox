@@ -84,11 +84,12 @@ mysql  Ver 14.14 Distrib 5.5.43, for debian-linux-gnu (x86_64) using readline 6.
 **PHP**
 ```
 $ php -v
-PHP 5.5.26-1~dotdeb+7.4 (cli) (built: Jun 18 2015 17:32:35)
+PHP 5.6.10-1~dotdeb+7.3 (cli) (built: Jun 15 2015 07:22:09)
 Copyright (c) 1997-2015 The PHP Group
-Zend Engine v2.5.0, Copyright (c) 1998-2015 Zend Technologies
+Zend Engine v2.6.0, Copyright (c) 1998-2015 Zend Technologies
     with Zend OPcache v7.0.6-dev, Copyright (c) 1999-2015, by Zend Technologies
-    with Xdebug v2.3.2, Copyright (c) 2002-2015, by Derick Rethans
+    with Xdebug v2.3.3, Copyright (c) 2002-2015, by Derick Rethans
+
 ```
 ```
 $ php -m
