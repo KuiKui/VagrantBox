@@ -57,7 +57,7 @@ And :
 **Linux**
 ```
 $ cat /etc/debian_version
-7.8
+8.4
 ```
 ```
 $ cat /etc/timezone
@@ -66,61 +66,58 @@ Europe/Paris
 
 **Apache**
 ```
-$ apache2 -v
-Server version: Apache/2.2.22 (Debian)
-Server built:   Dec 23 2014 22:48:29
+$ sudo apache2 -v
+Server version: Apache/2.4.10 (Debian)
+Server built:   Jul 20 2016 06:48:18
 ```
 
 **MySQL**
 ```
-$ mysqld --version
-mysqld  Ver 5.5.43-0+deb7u1 for debian-linux-gnu on x86_64 ((Debian))
+$ sudo mysqld --version
+mysqld  Ver 5.5.50-0+deb8u1 for debian-linux-gnu on x86_64 ((Debian))
 ```
 ```
 $ mysql --version
-mysql  Ver 14.14 Distrib 5.5.43, for debian-linux-gnu (x86_64) using readline 6.2
+mysql  Ver 14.14 Distrib 5.5.50, for debian-linux-gnu (x86_64) using readline 6.3
 ```
 
 **PHP**
 ```
 $ php -v
-PHP 5.6.10-1~dotdeb+7.3 (cli) (built: Jun 15 2015 07:22:09)
-Copyright (c) 1997-2015 The PHP Group
-Zend Engine v2.6.0, Copyright (c) 1998-2015 Zend Technologies
-    with Zend OPcache v7.0.6-dev, Copyright (c) 1999-2015, by Zend Technologies
-    with Xdebug v2.3.3, Copyright (c) 2002-2015, by Derick Rethans
-
+PHP 7.0.10-1~dotdeb+8.1 (cli) ( NTS )
+Copyright (c) 1997-2016 The PHP Group
+Zend Engine v3.0.0, Copyright (c) 1998-2016 Zend Technologies
+    with Zend OPcache v7.0.10-1~dotdeb+8.1, Copyright (c) 1999-2016, by Zend Technologies
 ```
 ```
 $ php -m
 [PHP Modules]
-bcmath
-bz2
 calendar
 Core
 ctype
 curl
 date
-dba
 dom
-ereg
 exif
 fileinfo
 filter
 ftp
 gd
+geoip
 gettext
+gmp
 hash
 iconv
-imagick
+igbinary
 intl
 json
 libxml
 mbstring
 mcrypt
-mhash
-mysql
+memcached
+msgpack
 mysqli
+mysqlnd
 openssl
 pcntl
 pcre
@@ -134,7 +131,6 @@ Reflection
 session
 shmop
 SimpleXML
-soap
 sockets
 SPL
 sqlite3
@@ -144,7 +140,6 @@ sysvsem
 sysvshm
 tokenizer
 wddx
-xdebug
 xml
 xmlreader
 xmlwriter
@@ -154,7 +149,6 @@ zip
 zlib
 
 [Zend Modules]
-Xdebug
 Zend OPcache
 ```
 ```
@@ -165,21 +159,15 @@ date.timezone = Europe/Paris
 **Redis**
 ```
 $ redis-server --version
-Redis server version 2.4.14 (00000000:0)
+Redis server v=3.2.3 sha=00000000:0 malloc=jemalloc-4.0.3 bits=64 build=de9221a79b40c05a
 ```
 
 **RabbitMQ**
 ```
 $ sudo service rabbitmq-server status
 ...
-{rabbit,"RabbitMQ","3.5.3"},
+RabbitMQ 3.6.5. Copyright (C) 2007-2016 Pivotal Software, Inc.
 ...
-```
-
-**Ruby**
-```
-$ ruby --version
-ruby 1.9.3p194 (2012-04-20 revision 35410) [x86_64-linux]
 ```
 
 **Shell**
@@ -192,40 +180,38 @@ $ ps -p $$
 **Tools**
 ```
 $ git --version
-git version 1.7.10.4
+git version 2.1.4
 ```
 ```
 $ composer --version
-Composer version 1.0-dev (b17ccbfa0d73f71ed8c11953e9e1e5d3709bf91e) 2015-06-30 12:27:28
+Composer version 1.2.0 2016-07-19 01:28:52
 ```
 ```
 $ ansible --version
-ansible 1.9.2
+ansible 2.1.1.0
 ```
 ```
 $ phantomjs --version
-1.9.8
+2.1.1
 ```
 ```
 $ htop --version
-htop 1.0.1 - (C) 2004-2011 Hisham Muhammad
+htop 1.0.3 - (C) 2004-2011 Hisham Muhammad
 Released under the GNU GPL.
 ```
 ```
 $ screen --version
-Screen version 4.01.00devel (GNU) 2-May-06
+Screen version 4.02.01 (GNU) 28-Apr-14
 ```
 
-**Additional Apache config**
+**Additional config**
 
-An environmental variable is set in `/etc/apache2/apache2.conf` to ease the development :
+An environmental variable `ENV_VAGRANT` is set to ease the development : use it to add dev only features (debug, etc.)
 
-* `SetEnv ENV_DEV true` : Use this custom env variable to add dev only features (debug, etc.)
-
-Check this variable with PHP :
+Just check this variable with PHP (works with CLI and Apache) :
 ```php
 <?php
-if (isset($_SERVER['ENV_DEV'])) {
-    doSomeDevThing();
+if (getenv('ENV_VAGRANT')) {
+    doSomeVagrantThing();
 }
 ```

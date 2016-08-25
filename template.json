@@ -8,7 +8,6 @@
         "scripts/custom.sh",
         "scripts/virtualbox.sh",
         "scripts/vagrant.sh",
-        "scripts/ruby.sh",
         "scripts/mysql.sh",
         "scripts/php.sh",
         "scripts/apache.sh",
@@ -22,7 +21,7 @@
       ],
       "override": {
         "virtualbox-iso": {
-          "execute_command": "echo 'vagrant'|sudo -S bash '{{.Path}}'"
+          "execute_command": "echo 'vagrant'|{{.Vars}} sudo -E -S bash '{{.Path}}'"
         }
       }
     }
@@ -51,30 +50,19 @@
       "disk_size": 10140,
       "guest_os_type": "Debian_64",
       "http_directory": "http",
-      "iso_checksum": "a91fba5001cf0fbccb44a7ae38c63b6e",
+      "iso_checksum": "8d52d1b7789cd5a464aae719f05299ec",
       "iso_checksum_type": "md5",
-      "iso_url": "http://cdimage.debian.org/mirror/cdimage/archive/7.8.0/amd64/iso-cd/debian-7.8.0-amd64-netinst.iso",
+      "iso_url": "http://cdimage.debian.org/mirror/cdimage/archive/8.4.0/amd64/iso-cd/debian-8.4.0-amd64-netinst.iso",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
-      "ssh_port": 22,
       "ssh_wait_timeout": "10000s",
-      "shutdown_command": "echo 'halt -p' > shutdown.sh; echo 'vagrant'|sudo -S bash 'shutdown.sh'",
+      "shutdown_command": "echo 'vagrant' | sudo -S shutdown -P now",
       "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
       "virtualbox_version_file": ".vbox_version",
       "headless": true,
       "vboxmanage": [
-        [
-          "modifyvm",
-          "{{.Name}}",
-          "--memory",
-          "256"
-        ],
-        [
-          "modifyvm",
-          "{{.Name}}",
-          "--cpus",
-          "1"
-        ]
+        ["modifyvm", "{{.Name}}", "--memory", "256"],
+        ["modifyvm", "{{.Name}}", "--cpus", "1"]
       ]
     }
   ],
