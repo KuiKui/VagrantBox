@@ -17,7 +17,7 @@ $ packer build template.json
 ## Test
 
 ```
-$ vagrant box add kuikui-test kuikui.box --force
+$ vagrant box add kuikui-test kuikui-php7.box --force
 $ vagrant up
 ```
 
@@ -25,7 +25,7 @@ $ vagrant up
 
 Add the new built box to vagrant :
 ```
-$ vagrant box add kuikui kuikui.box
+$ vagrant box add kuikui kuikui-php7.box
 ```
 
 And use the `box` instruction in your Vagrantfile to select the box :

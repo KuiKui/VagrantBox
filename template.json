@@ -69,7 +69,7 @@
   "post-processors": [
     {
       "type": "vagrant",
-      "output": "kuikui.box"
+      "output": "kuikui-php7.box"
     }
   ]
 }
