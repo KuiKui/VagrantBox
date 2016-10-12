@@ -2,6 +2,17 @@
 
 Sources to build our preconfigured **LAMP** + **Redis** + **RabbitMQ** + **Tools** Vagrant box.
 
+## Usage
+
+This box is available on [Hashicorp Atlas](https://atlas.hashicorp.com/kuikui/boxes/modern-lamp).
+
+To use it, juste add these lines to your `Vagrantfile` :
+
+```
+config.vm.box         = 'kuikui/modern-lamp'
+config.vm.box_version = '>=2.0.0'
+```
+
 ## Dependencies
 
 Install [Virtualbox](https://www.virtualbox.org/wiki/Downloads) and [packer](http://www.packer.io/downloads.html).
