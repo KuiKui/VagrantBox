@@ -19,4 +19,6 @@ wget https://www.dotdeb.org/dotdeb.gpg
 apt-key add dotdeb.gpg
 rm dotdeb.gpg
 
+echo 'deb http://ftp.us.debian.org/debian wheezy-backports main' > /etc/apt/sources.list.d/npm.list
+
 apt-get -y update
