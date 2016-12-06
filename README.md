@@ -1,6 +1,6 @@
 # LAMP Vagrant box
 
-Sources to build our preconfigured **LAMP** + **Redis** + **RabbitMQ** + **Tools** Vagrant box.
+Sources to build our preconfigured **LAMP** + **Redis** + **RabbitMQ** + **Elasticsearch** + **Tools** Vagrant box.
 
 ## Usage
 
@@ -25,10 +25,15 @@ $ cd VagrantBox
 $ packer build template.json
 ```
 
+For debug purpose :
+```
+$ PACKER_LOG=1 packer build template.json
+```
+
 ## Test
 
 ```
-$ vagrant box add kuikui-test kuikui-php7.box --force
+$ vagrant box add kuikui-test kuikui-modern-lamp.box --force
 $ vagrant up
 ```
 
@@ -36,7 +41,7 @@ $ vagrant up
 
 Add the new built box to vagrant :
 ```
-$ vagrant box add kuikui kuikui-php7.box
+$ vagrant box add kuikui kuikui-modern-lamp.box
 ```
 
 And use the `box` instruction in your Vagrantfile to select the box :
@@ -62,6 +67,7 @@ And :
 
 * http server can be reached from local env at `http://localhost:8080`
 * RabbitMQ web UI can be reached from local env at `http://localhost:15672`
+* Elasticsearch Head plugin can be reached from local env at `http://localhost:9200/_plugin/head/`
 
 ## Specs
 
@@ -79,26 +85,26 @@ Europe/Paris
 ```
 $ sudo apache2 -v
 Server version: Apache/2.4.10 (Debian)
-Server built:   Jul 20 2016 06:48:18
+Server built:   Sep 15 2016 20:44:43
 ```
 
 **MySQL**
 ```
 $ sudo mysqld --version
-mysqld  Ver 5.5.50-0+deb8u1 for debian-linux-gnu on x86_64 ((Debian))
+mysqld  Ver 5.5.52-0+deb8u1 for debian-linux-gnu on x86_64 ((Debian))
 ```
 ```
 $ mysql --version
-mysql  Ver 14.14 Distrib 5.5.50, for debian-linux-gnu (x86_64) using readline 6.3
+mysql  Ver 14.14 Distrib 5.5.52, for debian-linux-gnu (x86_64) using readline 6.3
 ```
 
 **PHP**
 ```
 $ php -v
-PHP 7.0.10-1~dotdeb+8.1 (cli) ( NTS )
+PHP 7.0.11-1~dotdeb+8.1 (cli) ( NTS )
 Copyright (c) 1997-2016 The PHP Group
 Zend Engine v3.0.0, Copyright (c) 1998-2016 Zend Technologies
-    with Zend OPcache v7.0.10-1~dotdeb+8.1, Copyright (c) 1999-2016, by Zend Technologies
+    with Zend OPcache v7.0.11-1~dotdeb+8.1, Copyright (c) 1999-2016, by Zend Technologies
 ```
 ```
 $ php -m
@@ -170,7 +176,7 @@ date.timezone = Europe/Paris
 **Redis**
 ```
 $ redis-server --version
-Redis server v=3.2.3 sha=00000000:0 malloc=jemalloc-4.0.3 bits=64 build=de9221a79b40c05a
+Redis server v=3.2.4 sha=00000000:0 malloc=jemalloc-4.0.3 bits=64 build=9ef16492c738c9f
 ```
 
 **RabbitMQ**
@@ -178,6 +184,14 @@ Redis server v=3.2.3 sha=00000000:0 malloc=jemalloc-4.0.3 bits=64 build=de9221a7
 $ sudo service rabbitmq-server status
 ...
 RabbitMQ 3.6.5. Copyright (C) 2007-2016 Pivotal Software, Inc.
+...
+```
+
+**ElasticSearch**
+```
+$ curl -XGET 'localhost:9200'
+...
+"number" : "1.7.6",
 ...
 ```
 
@@ -195,11 +209,11 @@ git version 2.1.4
 ```
 ```
 $ composer --version
-Composer version 1.2.0 2016-07-19 01:28:52
+Composer version 1.2.1 2016-09-12 11:27:19
 ```
 ```
 $ ansible --version
-ansible 2.1.1.0
+ansible 2.1.2.0
 ```
 ```
 $ phantomjs --version

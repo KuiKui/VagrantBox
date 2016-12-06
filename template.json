@@ -17,6 +17,8 @@
         "scripts/zsh.sh",
         "scripts/phantomjs.sh",
         "scripts/node.sh",
+        "scripts/java.sh",
+        "scripts/elasticsearch.sh",
         "scripts/cleanup.sh",
         "scripts/zerodisk.sh"
       ],
@@ -70,7 +72,7 @@
   "post-processors": [
     {
       "type": "vagrant",
-      "output": "kuikui-php7.box"
+      "output": "kuikui-modern-lamp.box"
     }
   ]
 }
