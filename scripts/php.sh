@@ -12,3 +12,5 @@ sed -i 's@;date.timezone =@date.timezone = Europe/Paris@' /etc/php/7.0/cli/php.i
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 chmod +x /usr/local/bin/composer
+composer --version
+chown -R vagrant:vagrant /home/vagrant/.composer
