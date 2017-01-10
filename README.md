@@ -10,7 +10,7 @@ To use it, juste add these lines to your `Vagrantfile` :
 
 ```
 config.vm.box         = 'kuikui/modern-lamp'
-config.vm.box_version = '>=2.0.0'
+config.vm.box_version = '>=2.1.0'
 ```
 
 ## Dependencies
@@ -74,7 +74,7 @@ And :
 **Linux**
 ```
 $ cat /etc/debian_version
-8.4
+8.5
 ```
 ```
 $ cat /etc/timezone
@@ -91,20 +91,21 @@ Server built:   Sep 15 2016 20:44:43
 **MySQL**
 ```
 $ sudo mysqld --version
-mysqld  Ver 5.5.52-0+deb8u1 for debian-linux-gnu on x86_64 ((Debian))
+mysqld  Ver 5.5.53-0+deb8u1 for debian-linux-gnu on x86_64 ((Debian))
 ```
 ```
 $ mysql --version
-mysql  Ver 14.14 Distrib 5.5.52, for debian-linux-gnu (x86_64) using readline 6.3
+mysql  Ver 14.14 Distrib 5.5.53, for debian-linux-gnu (x86_64) using readline 6.3
 ```
 
 **PHP**
 ```
 $ php -v
-PHP 7.0.11-1~dotdeb+8.1 (cli) ( NTS )
+PHP 7.0.14-1~dotdeb+8.1 (cli) ( NTS )
 Copyright (c) 1997-2016 The PHP Group
 Zend Engine v3.0.0, Copyright (c) 1998-2016 Zend Technologies
-    with Zend OPcache v7.0.11-1~dotdeb+8.1, Copyright (c) 1999-2016, by Zend Technologies
+    with Zend OPcache v7.0.14-1~dotdeb+8.1, Copyright (c) 1999-2016, by Zend Technologies
+    with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans
 ```
 ```
 $ php -m
@@ -157,6 +158,7 @@ sysvsem
 sysvshm
 tokenizer
 wddx
+xdebug
 xml
 xmlreader
 xmlwriter
@@ -176,14 +178,14 @@ date.timezone = Europe/Paris
 **Redis**
 ```
 $ redis-server --version
-Redis server v=3.2.4 sha=00000000:0 malloc=jemalloc-4.0.3 bits=64 build=9ef16492c738c9f
+Redis server v=3.2.6 sha=00000000:0 malloc=jemalloc-4.0.3 bits=64 build=48e6494d0efed33
 ```
 
 **RabbitMQ**
 ```
 $ sudo service rabbitmq-server status
 ...
-RabbitMQ 3.6.5. Copyright (C) 2007-2016 Pivotal Software, Inc.
+RabbitMQ 3.6.6. Copyright (C) 2007-2016 Pivotal Software, Inc.
 ...
 ```
 
@@ -209,11 +211,11 @@ git version 2.1.4
 ```
 ```
 $ composer --version
-Composer version 1.2.1 2016-09-12 11:27:19
+Composer version 1.3.1 2017-01-07 18:08:51
 ```
 ```
 $ ansible --version
-ansible 2.1.2.0
+ansible 2.2.0.0
 ```
 ```
 $ phantomjs --version
