@@ -10,7 +10,7 @@ To use it, juste add these lines to your `Vagrantfile` :
 
 ```
 config.vm.box         = 'kuikui/modern-lamp'
-config.vm.box_version = '>=2.2.1'
+config.vm.box_version = '>=2.3.0'
 ```
 
 ## Dependencies
@@ -101,15 +101,16 @@ mysql  Ver 14.14 Distrib 5.5.54, for debian-linux-gnu (x86_64) using readline 6.
 **PHP**
 ```
 $ php -v
-PHP 7.0.15-1~dotdeb+8.1 (cli) ( NTS )
-Copyright (c) 1997-2016 The PHP Group
-Zend Engine v3.0.0, Copyright (c) 1998-2016 Zend Technologies
-    with Zend OPcache v7.0.15-1~dotdeb+8.1, Copyright (c) 1999-2016, by Zend Technologies
+PHP 7.1.2-3+0~20170222101552.17+jessie~1.gbp444202 (cli) (built: Feb 22 2017 10:50:30) ( NTS )
+Copyright (c) 1997-2017 The PHP Group
+Zend Engine v3.1.0, Copyright (c) 1998-2017 Zend Technologies
+    with Zend OPcache v7.1.2-3+0~20170222101552.17+jessie~1.gbp444202, Copyright (c) 1999-2017, by Zend Technologies
     with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans
 ```
 ```
 $ php -m
 [PHP Modules]
+bcmath
 calendar
 Core
 ctype
@@ -129,6 +130,7 @@ iconv
 igbinary
 intl
 json
+ldap
 libxml
 mbstring
 mcrypt
@@ -145,6 +147,7 @@ pdo_sqlite
 Phar
 posix
 readline
+redis
 Reflection
 session
 shmop
@@ -168,6 +171,7 @@ zip
 zlib
 
 [Zend Modules]
+Xdebug
 Zend OPcache
 ```
 ```

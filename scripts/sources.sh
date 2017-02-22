@@ -5,7 +5,7 @@ echo 'deb-src http://httpredir.debian.org/debian jessie-updates main contrib non
 echo 'deb http://security.debian.org/ jessie/updates main contrib non-free' >> /etc/apt/sources.list
 echo 'deb-src http://security.debian.org/ jessie/updates main contrib non-free' >> /etc/apt/sources.list
 
-apt-get -y install software-properties-common
+apt-get -y install software-properties-common apt-transport-https lsb-release ca-certificates
 add-apt-repository -y 'deb http://ppa.launchpad.net/ansible/ansible/ubuntu vivid main'
 
 echo 'deb http://www.rabbitmq.com/debian/ testing main' > /etc/apt/sources.list.d/rabbitmq.list
@@ -27,5 +27,8 @@ apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886
 
 echo 'deb http://packages.elastic.co/elasticsearch/1.7/debian stable main' > /etc/apt/sources.list.d/elasticsearch-1.7.list
 wget -qO - https://packages.elastic.co/GPG-KEY-elasticsearch | apt-key add -
+
+wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
+echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list
 
 apt-get -y update
