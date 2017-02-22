@@ -10,7 +10,7 @@ To use it, juste add these lines to your `Vagrantfile` :
 
 ```
 config.vm.box         = 'kuikui/modern-lamp'
-config.vm.box_version = '>=2.1.0'
+config.vm.box_version = '>=2.2.1'
 ```
 
 ## Dependencies
@@ -91,20 +91,20 @@ Server built:   Sep 15 2016 20:44:43
 **MySQL**
 ```
 $ sudo mysqld --version
-mysqld  Ver 5.5.53-0+deb8u1 for debian-linux-gnu on x86_64 ((Debian))
+mysqld  Ver 5.5.54-0+deb8u1 for debian-linux-gnu on x86_64 ((Debian))
 ```
 ```
 $ mysql --version
-mysql  Ver 14.14 Distrib 5.5.53, for debian-linux-gnu (x86_64) using readline 6.3
+mysql  Ver 14.14 Distrib 5.5.54, for debian-linux-gnu (x86_64) using readline 6.3
 ```
 
 **PHP**
 ```
 $ php -v
-PHP 7.0.14-1~dotdeb+8.1 (cli) ( NTS )
+PHP 7.0.15-1~dotdeb+8.1 (cli) ( NTS )
 Copyright (c) 1997-2016 The PHP Group
 Zend Engine v3.0.0, Copyright (c) 1998-2016 Zend Technologies
-    with Zend OPcache v7.0.14-1~dotdeb+8.1, Copyright (c) 1999-2016, by Zend Technologies
+    with Zend OPcache v7.0.15-1~dotdeb+8.1, Copyright (c) 1999-2016, by Zend Technologies
     with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans
 ```
 ```
@@ -178,7 +178,7 @@ date.timezone = Europe/Paris
 **Redis**
 ```
 $ redis-server --version
-Redis server v=3.2.6 sha=00000000:0 malloc=jemalloc-4.0.3 bits=64 build=48e6494d0efed33
+Redis server v=3.2.7 sha=00000000:0 malloc=jemalloc-4.4.0 bits=64 build=2860cc704b521802
 ```
 
 **RabbitMQ**
@@ -187,6 +187,23 @@ $ sudo service rabbitmq-server status
 ...
 RabbitMQ 3.6.6. Copyright (C) 2007-2016 Pivotal Software, Inc.
 ...
+```
+
+**Javascript**
+
+```
+$node --version
+v6.10.0
+```
+
+```
+$npm --version
+3.10.10
+```
+
+```
+$gulp --version
+CLI version 3.9.1
 ```
 
 **ElasticSearch**
@@ -211,11 +228,11 @@ git version 2.1.4
 ```
 ```
 $ composer --version
-Composer version 1.3.1 2017-01-07 18:08:51
+Composer version 1.3.2 2017-01-27 18:23:41
 ```
 ```
 $ ansible --version
-ansible 2.2.0.0
+ansible 2.2.1.0
 ```
 ```
 $ phantomjs --version
