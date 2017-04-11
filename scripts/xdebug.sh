@@ -8,6 +8,6 @@ echo "xdebug.remote_enable = 1" | tee -a /etc/php/7.1/mods-available/xdebug.ini
 # It is better to set the host IP instead of enabling `remote_connect_back` because when debegugging CLI scripts
 # Xdebug can't connect to any IP.
 echo "xdebug.remote_host = 10.0.2.2" | tee -a /etc/php/7.1/mods-available/xdebug.ini
-echo "xdebug.default_enable = 1" | tee -a /etc/php/7.1/mods-available/xdebug.ini
+echo "xdebug.remote_autostart = 1" | tee -a /etc/php/7.1/mods-available/xdebug.ini
 
 service apache2 restart
