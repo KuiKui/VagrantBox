@@ -10,3 +10,7 @@ debconf-set-selections <<< 'locales locales/default_environment_locale select en
 dpkg-reconfigure -f noninteractive locales
 update-locale LANG=en_US.UTF-8
 update-locale LC_CTYPE=en_US.UTF-8
+
+# Setup known hosts
+mkdir -p /home/vagrant/.ssh/
+ssh-keyscan -t rsa -H github.com >> /home/vagrant/.ssh/known_hosts
