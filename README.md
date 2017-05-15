@@ -91,11 +91,11 @@ Server built:   Sep 15 2016 20:44:43
 **MySQL**
 ```
 $ sudo mysqld --version
-mysqld  Ver 5.5.54-0+deb8u1 for debian-linux-gnu on x86_64 ((Debian))
+mysqld  Ver 5.6.36 for Linux on x86_64 (MySQL Community Server (GPL))
 ```
 ```
 $ mysql --version
-mysql  Ver 14.14 Distrib 5.5.54, for debian-linux-gnu (x86_64) using readline 6.3
+mysql  Ver 14.14 Distrib 5.6.36, for Linux (x86_64) using  EditLine wrapper
 ```
 
 **PHP**
