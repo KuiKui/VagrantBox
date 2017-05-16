@@ -74,7 +74,7 @@ And :
 **Linux**
 ```
 $ cat /etc/debian_version
-8.5
+8.8
 ```
 ```
 $ cat /etc/timezone
@@ -85,7 +85,7 @@ Europe/Paris
 ```
 $ sudo apache2 -v
 Server version: Apache/2.4.10 (Debian)
-Server built:   Sep 15 2016 20:44:43
+Server built:   Feb 24 2017 18:40:28
 ```
 
 **MySQL**
@@ -101,11 +101,11 @@ mysql  Ver 14.14 Distrib 5.6.36, for Linux (x86_64) using  EditLine wrapper
 **PHP**
 ```
 $ php -v
-PHP 7.1.2-3+0~20170222101552.17+jessie~1.gbp444202 (cli) (built: Feb 22 2017 10:50:30) ( NTS )
+PHP 7.1.5-1+0~20170513113859.24+jessie~1.gbpe4bc94 (cli) (built: May 13 2017 15:44:35) ( NTS )
 Copyright (c) 1997-2017 The PHP Group
 Zend Engine v3.1.0, Copyright (c) 1998-2017 Zend Technologies
-    with Zend OPcache v7.1.2-3+0~20170222101552.17+jessie~1.gbp444202, Copyright (c) 1999-2017, by Zend Technologies
-    with Xdebug v2.5.0, Copyright (c) 2002-2016, by Derick Rethans
+    with Zend OPcache v7.1.5-1+0~20170513113859.24+jessie~1.gbpe4bc94, Copyright (c) 1999-2017, by Zend Technologies
+    with Xdebug v2.5.1, Copyright (c) 2002-2017, by Derick Rethans
 ```
 ```
 $ php -m
@@ -182,31 +182,31 @@ date.timezone = Europe/Paris
 **Redis**
 ```
 $ redis-server --version
-Redis server v=3.2.7 sha=00000000:0 malloc=jemalloc-4.4.0 bits=64 build=2860cc704b521802
+Redis server v=3.2.8 sha=00000000:0 malloc=jemalloc-4.0.3 bits=64 build=56206ba45ffc95ca
 ```
 
 **RabbitMQ**
 ```
 $ sudo service rabbitmq-server status
 ...
-RabbitMQ 3.6.6. Copyright (C) 2007-2016 Pivotal Software, Inc.
+RabbitMQ 3.6.9. Copyright (C) 2007-2016 Pivotal Software, Inc.
 ...
 ```
 
 **Javascript**
 
 ```
-$node --version
-v6.10.0
+$ node --version
+v6.10.3
 ```
 
 ```
-$npm --version
-3.10.10
+$ npm --version
+4.5.0
 ```
 
 ```
-$gulp --version
+$ gulp --version
 CLI version 3.9.1
 ```
 
@@ -232,11 +232,14 @@ git version 2.1.4
 ```
 ```
 $ composer --version
-Composer version 1.3.2 2017-01-27 18:23:41
+Composer version 1.4.1 2017-03-10 09:29:45
 ```
 ```
 $ ansible --version
-ansible 2.2.1.0
+ansible 2.3.0.0
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = Default w/o overrides
+  python version = 2.7.9 (default, Jun 29 2016, 13:08:31) [GCC 4.9.2]
 ```
 ```
 $ phantomjs --version
@@ -244,7 +247,7 @@ $ phantomjs --version
 ```
 ```
 $ htop --version
-htop 1.0.3 - (C) 2004-2011 Hisham Muhammad
+htop 1.0.3 - (C) 2004-2012 Hisham Muhammad
 Released under the GNU GPL.
 ```
 ```
