@@ -19,8 +19,6 @@
         "scripts/zsh.sh",
         "scripts/phantomjs.sh",
         "scripts/js.sh",
-        "scripts/java.sh",
-        "scripts/elasticsearch.sh",
         "scripts/cleanup.sh",
         "scripts/zerodisk.sh"
       ],

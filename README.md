@@ -1,6 +1,6 @@
 # LAMP Vagrant box
 
-Sources to build our preconfigured **LAMP** + **Redis** + **RabbitMQ** + **Elasticsearch** + **Tools** Vagrant box.
+Sources to build our preconfigured **LAMP** + **Redis** + **RabbitMQ** + **Tools** Vagrant box.
 
 ## Usage
 
@@ -67,7 +67,6 @@ And :
 
 * http server can be reached from local env at `http://localhost:8080`
 * RabbitMQ web UI can be reached from local env at `http://localhost:15672`
-* Elasticsearch Head plugin can be reached from local env at `http://localhost:9200/_plugin/head/`
 
 ## Specs
 
@@ -208,14 +207,6 @@ $ npm --version
 ```
 $ gulp --version
 CLI version 3.9.1
-```
-
-**ElasticSearch**
-```
-$ curl -XGET 'localhost:9200'
-...
-"number" : "1.7.6",
-...
 ```
 
 **Shell**
