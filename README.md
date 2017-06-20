@@ -73,18 +73,18 @@ And :
 **Linux**
 ```
 $ cat /etc/debian_version
-8.8
+9.0
 ```
 ```
 $ cat /etc/timezone
-Europe/Paris
+Etc/UTC
 ```
 
 **Apache**
 ```
 $ sudo apache2 -v
-Server version: Apache/2.4.10 (Debian)
-Server built:   Feb 24 2017 18:40:28
+Server version: Apache/2.4.25 (Debian)
+Server built:   2017-01-25T22:59:26
 ```
 
 **MySQL**
@@ -100,10 +100,10 @@ mysql  Ver 14.14 Distrib 5.6.36, for Linux (x86_64) using  EditLine wrapper
 **PHP**
 ```
 $ php -v
-PHP 7.1.5-1+0~20170513113859.24+jessie~1.gbpe4bc94 (cli) (built: May 13 2017 15:44:35) ( NTS )
+PHP 7.1.6-2+0~20170614061136.1+stretch~1.gbp831871 (cli) (built: Jun 14 2017 06:11:37) ( NTS )
 Copyright (c) 1997-2017 The PHP Group
 Zend Engine v3.1.0, Copyright (c) 1998-2017 Zend Technologies
-    with Zend OPcache v7.1.5-1+0~20170513113859.24+jessie~1.gbpe4bc94, Copyright (c) 1999-2017, by Zend Technologies
+    with Zend OPcache v7.1.6-2+0~20170614061136.1+stretch~1.gbp831871, Copyright (c) 1999-2017, by Zend Technologies
     with Xdebug v2.5.1, Copyright (c) 2002-2017, by Derick Rethans
 ```
 ```
@@ -151,6 +151,7 @@ Reflection
 session
 shmop
 SimpleXML
+soap
 sockets
 SPL
 sqlite3
@@ -181,14 +182,14 @@ date.timezone = Europe/Paris
 **Redis**
 ```
 $ redis-server --version
-Redis server v=3.2.8 sha=00000000:0 malloc=jemalloc-4.0.3 bits=64 build=56206ba45ffc95ca
+Redis server v=3.2.6 sha=00000000:0 malloc=jemalloc-3.6.0 bits=64 build=826601c992442478
 ```
 
 **RabbitMQ**
 ```
 $ sudo service rabbitmq-server status
 ...
-RabbitMQ 3.6.9. Copyright (C) 2007-2016 Pivotal Software, Inc.
+RabbitMQ 3.6.10. Copyright (C) 2007-2017 Pivotal Software, Inc.
 ...
 ```
 
@@ -196,12 +197,12 @@ RabbitMQ 3.6.9. Copyright (C) 2007-2016 Pivotal Software, Inc.
 
 ```
 $ node --version
-v6.10.3
+v6.11.0
 ```
 
 ```
 $ npm --version
-4.5.0
+5.0.3
 ```
 
 ```
@@ -219,18 +220,18 @@ $ ps -p $$
 **Tools**
 ```
 $ git --version
-git version 2.1.4
+git version 2.11.0
 ```
 ```
 $ composer --version
-Composer version 1.4.1 2017-03-10 09:29:45
+Composer version 1.4.2 2017-05-17 08:17:52
 ```
 ```
 $ ansible --version
-ansible 2.3.0.0
-  config file = /etc/ansible/ansible.cfg
+ansible 2.3.1.0
+  config file =
   configured module search path = Default w/o overrides
-  python version = 2.7.9 (default, Jun 29 2016, 13:08:31) [GCC 4.9.2]
+  python version = 2.7.13 (default, Jan 19 2017, 14:48:08) [GCC 6.3.0 20170118]
 ```
 ```
 $ phantomjs --version
@@ -238,12 +239,12 @@ $ phantomjs --version
 ```
 ```
 $ htop --version
-htop 1.0.3 - (C) 2004-2012 Hisham Muhammad
+htop 2.0.2 - (C) 2004-2016 Hisham Muhammad
 Released under the GNU GPL.
 ```
 ```
 $ screen --version
-Screen version 4.02.01 (GNU) 28-Apr-14
+Screen version 4.05.00 (GNU) 10-Dec-16
 ```
 
 **Additional config**
