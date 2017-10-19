@@ -1,12 +1,4 @@
-echo 'deb http://httpredir.debian.org/debian jessie main contrib non-free' >> /etc/apt/sources.list
-echo 'deb-src http://httpredir.debian.org/debian jessie main contrib non-free' >> /etc/apt/sources.list
-echo 'deb http://httpredir.debian.org/debian jessie-updates main contrib non-free' >> /etc/apt/sources.list
-echo 'deb-src http://httpredir.debian.org/debian jessie-updates main contrib non-free' >> /etc/apt/sources.list
-echo 'deb http://security.debian.org/ jessie/updates main contrib non-free' >> /etc/apt/sources.list
-echo 'deb-src http://security.debian.org/ jessie/updates main contrib non-free' >> /etc/apt/sources.list
-
-apt-get -y install software-properties-common apt-transport-https lsb-release ca-certificates
-add-apt-repository -y 'deb http://ppa.launchpad.net/ansible/ansible/ubuntu vivid main'
+apt-get -y install software-properties-common apt-transport-https lsb-release ca-certificates dirmngr
 
 echo 'deb http://www.rabbitmq.com/debian/ testing main' > /etc/apt/sources.list.d/rabbitmq.list
 wget https://www.rabbitmq.com/rabbitmq-release-signing-key.asc
@@ -19,9 +11,10 @@ wget https://www.dotdeb.org/dotdeb.gpg
 apt-key add dotdeb.gpg
 rm dotdeb.gpg
 
-echo 'deb http://ftp.us.debian.org/debian wheezy-backports main' > /etc/apt/sources.list.d/npm.list
-
 wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
 echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list
+
+echo "deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main" > /etc/apt/sources.list.d/ansible.list
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
 
 apt-get -y update
