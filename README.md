@@ -104,7 +104,8 @@ PHP 7.1.10-1+0~20170929170818.9+stretch~1.gbp501135 (cli) (built: Sep 29 2017 17
 Copyright (c) 1997-2017 The PHP Group
 Zend Engine v3.1.0, Copyright (c) 1998-2017 Zend Technologies
     with Zend OPcache v7.1.10-1+0~20170929170818.9+stretch~1.gbp501135, Copyright (c) 1999-2017, by Zend Technologies
-    with Xdebug v2.5.5, Copyright (c) 2002-2017, by Derick Rethans```
+    with Xdebug v2.5.5, Copyright (c) 2002-2017, by Derick Rethans
+```
 ```
 $ php -m
 [PHP Modules]
