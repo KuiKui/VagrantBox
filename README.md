@@ -73,7 +73,7 @@ And :
 **Linux**
 ```
 $ cat /etc/debian_version
-9.0
+9.1
 ```
 ```
 $ cat /etc/timezone
@@ -84,28 +84,27 @@ Etc/UTC
 ```
 $ sudo apache2 -v
 Server version: Apache/2.4.25 (Debian)
-Server built:   2017-01-25T22:59:26
+Server built:   2017-09-19T18:58:57
 ```
 
 **MySQL**
 ```
 $ sudo mysqld --version
-mysqld  Ver 5.6.36 for Linux on x86_64 (MySQL Community Server (GPL))
+mysqld  Ver 5.6.38 for Linux on x86_64 (MySQL Community Server (GPL))
 ```
 ```
 $ mysql --version
-mysql  Ver 14.14 Distrib 5.6.36, for Linux (x86_64) using  EditLine wrapper
+mysql  Ver 14.14 Distrib 5.6.38, for Linux (x86_64) using  EditLine wrapper
 ```
 
 **PHP**
 ```
 $ php -v
-PHP 7.1.6-2+0~20170614061136.1+stretch~1.gbp831871 (cli) (built: Jun 14 2017 06:11:37) ( NTS )
+PHP 7.1.10-1+0~20170929170818.9+stretch~1.gbp501135 (cli) (built: Sep 29 2017 17:08:20) ( NTS )
 Copyright (c) 1997-2017 The PHP Group
 Zend Engine v3.1.0, Copyright (c) 1998-2017 Zend Technologies
-    with Zend OPcache v7.1.6-2+0~20170614061136.1+stretch~1.gbp831871, Copyright (c) 1999-2017, by Zend Technologies
-    with Xdebug v2.5.1, Copyright (c) 2002-2017, by Derick Rethans
-```
+    with Zend OPcache v7.1.10-1+0~20170929170818.9+stretch~1.gbp501135, Copyright (c) 1999-2017, by Zend Technologies
+    with Xdebug v2.5.5, Copyright (c) 2002-2017, by Derick Rethans```
 ```
 $ php -m
 [PHP Modules]
@@ -189,7 +188,7 @@ Redis server v=3.2.6 sha=00000000:0 malloc=jemalloc-3.6.0 bits=64 build=826601c9
 ```
 $ sudo service rabbitmq-server status
 ...
-RabbitMQ 3.6.10. Copyright (C) 2007-2017 Pivotal Software, Inc.
+RabbitMQ 3.6.12. Copyright (C) 2007-2017 Pivotal Software, Inc.
 ...
 ```
 
@@ -197,12 +196,12 @@ RabbitMQ 3.6.10. Copyright (C) 2007-2017 Pivotal Software, Inc.
 
 ```
 $ node --version
-v6.11.0
+v6.11.4
 ```
 
 ```
 $ npm --version
-5.0.3
+5.5.1
 ```
 
 ```
@@ -224,13 +223,15 @@ git version 2.11.0
 ```
 ```
 $ composer --version
-Composer version 1.4.2 2017-05-17 08:17:52
+Composer version 1.5.2 2017-09-11 16:59:25
 ```
 ```
 $ ansible --version
-ansible 2.3.1.0
-  config file =
-  configured module search path = Default w/o overrides
+ansible 2.4.0.0
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/dist-packages/ansible
+  executable location = /usr/bin/ansible
   python version = 2.7.13 (default, Jan 19 2017, 14:48:08) [GCC 6.3.0 20170118]
 ```
 ```
