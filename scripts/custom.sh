@@ -14,3 +14,6 @@ update-locale LC_CTYPE=en_US.UTF-8
 # Setup known hosts
 mkdir -p /home/vagrant/.ssh/
 ssh-keyscan -t rsa -H github.com >> /home/vagrant/.ssh/known_hosts
+
+# Stop Git from trying to guess author's name and email from system values
+git config --global --add user.useConfigOnly true
