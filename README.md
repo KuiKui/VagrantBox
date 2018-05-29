@@ -4,7 +4,7 @@ Sources to build our preconfigured **LAMP** + **Redis** + **RabbitMQ** + **Tools
 
 ## Usage
 
-This box is available on [Hashicorp Atlas](https://atlas.hashicorp.com/kuikui/boxes/modern-lamp).
+This box is available on [Vagrant Cloud](https://app.vagrantup.com/kuikui/boxes/modern-lamp).
 
 To use it, juste add these lines to your `Vagrantfile` :
 
