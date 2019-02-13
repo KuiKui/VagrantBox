@@ -73,7 +73,7 @@ And :
 **Linux**
 ```
 $ cat /etc/debian_version
-9.3
+9.7
 ```
 ```
 $ cat /etc/timezone
@@ -84,26 +84,26 @@ Etc/UTC
 ```
 $ sudo apache2 -v
 Server version: Apache/2.4.25 (Debian)
-Server built:   2017-09-19T18:58:57
+Server built:   2018-11-03T18:46:19
 ```
 
 **MySQL**
 ```
 $ sudo mysqld --version
-mysqld  Ver 5.6.39 for Linux on x86_64 (MySQL Community Server (GPL))
+mysqld  Ver 5.7.25 for Linux on x86_64 (MySQL Community Server (GPL))
 ```
 ```
 $ mysql --version
-mysql  Ver 14.14 Distrib 5.6.39, for Linux (x86_64) using  EditLine wrapper
+mysql  Ver 14.14 Distrib 5.7.25, for Linux (x86_64) using  EditLine wrapper
 ```
 
 **PHP**
 ```
 $ php -v
-PHP 7.2.1-1+0~20180105151615.16+stretch~1.gbpd3910a (cli) (built: Jan  5 2018 15:16:17) ( NTS )
-Copyright (c) 1997-2017 The PHP Group
-Zend Engine v3.2.0, Copyright (c) 1998-2017 Zend Technologies
-    with Zend OPcache v7.2.1-1+0~20180105151615.16+stretch~1.gbpd3910a, Copyright (c) 1999-2017, by Zend Technologies
+PHP 7.2.15-1+0~20190209065123.16+stretch~1.gbp3ad8c0 (cli) (built: Feb  9 2019 06:51:24) ( NTS )
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.2.0, Copyright (c) 1998-2018 Zend Technologies
+    with Zend OPcache v7.2.15-1+0~20190209065123.16+stretch~1.gbp3ad8c0, Copyright (c) 1999-2018, by Zend Technologies
     with Xdebug v2.6.0beta1, Copyright (c) 2002-2017, by Derick Rethans
 ```
 ```
@@ -132,7 +132,6 @@ json
 ldap
 libxml
 mbstring
-mcrypt
 memcached
 msgpack
 mysqli
@@ -153,6 +152,7 @@ shmop
 SimpleXML
 soap
 sockets
+sodium
 SPL
 sqlite3
 standard
@@ -182,14 +182,14 @@ date.timezone = Europe/Paris
 **Redis**
 ```
 $ redis-server --version
-Redis server v=3.2.6 sha=00000000:0 malloc=jemalloc-3.6.0 bits=64 build=826601c992442478
+Redis server v=3.2.6 sha=00000000:0 malloc=jemalloc-3.6.0 bits=64 build=c9ca860b301a190d
 ```
 
 **RabbitMQ**
 ```
 $ sudo service rabbitmq-server status
 ...
-RabbitMQ 3.6.14. Copyright (C) 2007-2017 Pivotal Software, Inc.
+RabbitMQ 3.6.15. Copyright (C) 2007-2018 Pivotal Software, Inc.
 ...
 ```
 
@@ -197,17 +197,17 @@ RabbitMQ 3.6.14. Copyright (C) 2007-2017 Pivotal Software, Inc.
 
 ```
 $ node --version
-v6.12.3
+v6.16.0
 ```
 
 ```
 $ npm --version
-5.6.0
+3.10.10
 ```
 
 ```
 $ gulp --version
-CLI version 3.9.1
+CLI version 2.0.1
 ```
 
 **Shell**
@@ -224,16 +224,11 @@ git version 2.11.0
 ```
 ```
 $ composer --version
-Composer version 1.6.2 2018-01-05 15:28:41
+Composer version 1.8.4 2019-02-11 10:52:10
 ```
 ```
 $ ansible --version
-ansible 2.4.2.0
-  config file = /etc/ansible/ansible.cfg
-  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
-  ansible python module location = /usr/lib/python2.7/dist-packages/ansible
-  executable location = /usr/bin/ansible
-  python version = 2.7.13 (default, Nov 24 2017, 17:33:09) [GCC 6.3.0 20170516]
+ansible 2.7.7
 ```
 ```
 $ phantomjs --version

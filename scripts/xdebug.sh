@@ -11,6 +11,7 @@ xdebug.remote_enable = 1
 ; It is better to set the host IP instead of enabling `remote_connect_back` because when debegugging CLI scripts
 ; Xdebug can't connect to any IP.
 xdebug.remote_host = 10.0.2.2
+xdebug.remote_connect_back = 0
 xdebug.remote_autostart = 1
 EOF
 

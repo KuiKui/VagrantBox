@@ -1,1 +1,1 @@
-apt-get -y install ansible
+apt-get -y --allow-unauthenticated install ansible
